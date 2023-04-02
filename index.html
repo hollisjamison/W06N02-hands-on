@@ -3,30 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
     <title>Movie Page</title>
   </head>
   <body>
     <div class="grid-container">
-      <div class="grid-item" name="movieChoices">
+      <div class="grid-item" id="movieChoices">
         <h3>Select Your Movie:</h3>
         <ul>
-          <li class="selected">Ghostbusters</li>
-          <li>Back to the Future</li>
-          <li>Titanic</li>
+          <li class="selected" id="movie0" onclick="displayMovie(0)">Ghostbusters</li>
+          <li class="" id="movie1" onclick="displayMovie(1)">Back to the Future</li>
+          <li class="" id="movie2" onclick="displayMovie(2)">Titanic</li>
         </ul>
       </div>
-      <div class="grid-item" name="movie">
+      <div class="grid-item" id="movie">
         <div class="poster">
-          <img name="posterImage" src="" alt="" />
+          <img id="posterImage" src="" alt="" />
         </div>
-        <h2 name="title"></h2>
-        <div><strong>Year: </strong><span name="year"></span></div>
-        <div><strong>Director: </strong><span name="director"></span></div>
-        <div><strong>Year: </strong><span name="synopsis"></span></div>
+        <h2 id="title"></h2>
+        <div><strong>Year: </strong><span id="year"></span></div>
+        <div><strong>Director: </strong><span id="director"></span></div>
+        <div><strong>Year: </strong><span id="synopsis"></span></div>
       </div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>
