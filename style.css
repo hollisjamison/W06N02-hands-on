@@ -5,7 +5,6 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh;
     grid-gap: 20px;
     justify-items: center;
     align-items: center;
@@ -17,6 +16,15 @@ body {
     border: solid 3px black;
     text-align: center;
     padding: 20px;
+}
+
+.selected{
+    font-weight: bolder;
+    color: blue;
+}
+
+li {
+    list-style:none;
 }
 
 .poster {
