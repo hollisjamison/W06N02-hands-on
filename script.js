@@ -1,4 +1,4 @@
-var movies = [
+let movies = [
   {
     name: "Ghostbusters",
     director: "Ivan Reitman",
@@ -24,6 +24,8 @@ var movies = [
       "A young woman falls in love with a poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
   },
 ];
+
+let filteredMovies = [...movies]
 
 function displayMovie(index) {
   // Get the HTML elements to update
@@ -54,4 +56,37 @@ function displayMovie(index) {
   clickedLi.classList.add('selected');
 }
 
+function generateList() {
+const movieListEl = document.getElementById("movieList");
+  
+  while(movieListEl.firstChild) {
+    movieListEl.removeChild(movieListEl.firstChild)
+  }
+
+  for (let i = 0; i < filteredMovies.length; i++) {
+    const movie = filteredMovies[i];
+    const liEl = document.createElement("li");
+    liEl.id = `movie${i}`;
+    liEl.textContent = movie.name;
+    liEl.onclick = () => displayMovie(i);
+    movieListEl.appendChild(liEl);
+  }
+}
+
+function handleSearch() {
+  const searchInput = document.querySelector('input[name="search"]');
+  const searchTerm = searchInput.value.toLowerCase();
+
+  filteredMovies = [];
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].name.toLowerCase().includes(searchTerm)) {
+      filteredMovies.push(movies[i]);
+    }
+  }
+    generateList()
+  return null
+}
+
+
+generateList()
 displayMovie(0)

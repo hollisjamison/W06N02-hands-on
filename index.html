@@ -11,12 +11,12 @@
     <div class="grid-container">
       <div class="grid-item" id="movieChoices">
         <h3>Select Your Movie:</h3>
-        <form>
+        <form onsubmit="return false">
           <label for="search">Search:</label>
           <input name="search" type="text"/>
-          <button name="searchBtn" type="button">Submit</button>
+          <button onclick="handleSearch()" name="searchBtn" type="button">Submit</button>
         </form>
-        <ul name="movieList">
+        <ul id="movieList">
         </ul>
       </div>
       <div class="grid-item" id="movie">
