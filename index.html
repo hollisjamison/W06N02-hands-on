@@ -11,10 +11,12 @@
     <div class="grid-container">
       <div class="grid-item" id="movieChoices">
         <h3>Select Your Movie:</h3>
-        <ul>
-          <li class="selected" id="movie0" onclick="displayMovie(0)">Ghostbusters</li>
-          <li class="" id="movie1" onclick="displayMovie(1)">Back to the Future</li>
-          <li class="" id="movie2" onclick="displayMovie(2)">Titanic</li>
+        <form>
+          <label for="search">Search:</label>
+          <input name="search" type="text"/>
+          <button name="searchBtn" type="button">Submit</button>
+        </form>
+        <ul name="movieList">
         </ul>
       </div>
       <div class="grid-item" id="movie">
